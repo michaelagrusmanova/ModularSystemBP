@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <title>Modulární systém pro předzpracování a analýzu digitálních obrazových dat</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href='https://fonts.googleapis.com/css?family=RobotoDraft' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+<!-- Side Navigation -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-white w3-animate-left w3-card" style="z-index:3;width:320px;" id="mySidebar">
+  <br>
+  <a href="index.html" class="w3-bar-item w3-button">O programu</a>
+  <a href="barevneprostredi.html" class="w3-bar-item w3-button">Barevné prostředí</a>
+  <a href="geometricketransformace.html" class="w3-bar-item w3-button">Geometrické transformace</a>
+  <a href="jasovetransformace.html" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey">Jasové transformace</a>
+  <a href="filtracesumu.html" class="w3-bar-item w3-button">Filtrace šumu</a>
+  <a href="hranovedetektory.html" class="w3-bar-item w3-button">Hranové detektory</a>
+  <a href="segmentace.html" class="w3-bar-item w3-button">Segmentace obrazu</a>
+  <a href="morfologie.html" class="w3-bar-item w3-button">Binární morfologie</a>
+  <a href="hough.html" class="w3-bar-item w3-button">Houghova transformace</a>
+  <a href="detekce.html" class="w3-bar-item w3-button">Detekce a identifikace objektů</a>
+</nav>
+
+
+
+<!-- Overlay effect when opening the side navigation on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="Close Sidemenu" id="myOverlay"></div>
+
+<!-- Page content -->
+<div class="w3-main" style="margin-left:320px;">
+<i class="fa fa-bars w3-button w3-white w3-hide-large w3-xlarge w3-margin-left w3-margin-top" onclick="w3_open()"></i>
+
+
+<div id="Borge" class="w3-container methods">
+  <br>
+  <h4><b>Jasové transformace</b></h4>
+  <hr>
+  <h6><b>Jasové korekce</b></h6>
+    <ul>
+      <li><b>Modul, metoda: </b>modul_correction, method_correct(previous, etalon, c)</li>
+      <li><b>Parametry metody: </b>previous - vstupní obrázek, etalon - etalonový šedý obraz, c - konstantní jas</li>
+      <li><b>Popis: </b>Oprava chyb u obrázků s jasovou poruchou.</li>
+    </ul>
+
+  <h6><b>Negativ</b></h6>
+    <ul>
+      <li><b>Modul, metoda: </b>modul_negate, method_negate(previous)</li>
+      <li><b>Parametry metody: </b>previous - vstupní obrázek</li>
+      <li><b>Popis: </b>Inverze obrázku. (Odečtení jednotlivých obrazových bodů od 255.)</li>
+    </ul>
+
+  <h6><b>Ekvalizace histogramu</b></h6>
+    <ul>
+      <li><b>Modul, metoda: </b>modul_equalize, method_equalize(previous)</li>
+      <li><b>Parametry metody: </b>previous - vstupní obrázek</li>
+      <li><b>Popis: </b>Vyrovnání obrázku. (Zvýšení kontrastu blízko maxim histogramu a snížení konstrastu blízko minim histogramu.)</li>
+    </ul>
+
+</div>     
+</div>
+
+</body>
+</html> 

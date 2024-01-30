@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<methods>
+  <Method ID="1" Name="C:/Python38/Bakalarka/Zdrojaky_priklady/20160516_134700.jpg"/>
+  <Method ID="2" Name="RGB2G"/>
+  <Method ID="3" Name="Rotace" Number="112" File="°"/>
+  <Method ID="4" Name="Negativ"/>
+  <Method ID="5" Name="Ekvalizace"/>
+  <Method ID="6" Name="Fprůměr" Number="12"/>
+  <Method ID="7" Name="FGauss" Number="12"/>
+  <Method ID="8" Name="LaplaceHD"/>
+  <Method ID="9" Name="SobelHD" Number="12"/>
+  <Method ID="10" Name=""/>
+</methods>

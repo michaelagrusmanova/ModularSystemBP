@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <title>Modulární systém pro předzpracování a analýzu digitálních obrazových dat</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href='https://fonts.googleapis.com/css?family=RobotoDraft' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+<!-- Side Navigation -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-white w3-animate-left w3-card" style="z-index:3;width:320px;" id="mySidebar">
+  <br>
+  <a href="index.html" class="w3-bar-item w3-button">O programu</a>
+  <a href="barevneprostredi.html" class="w3-bar-item w3-button">Barevné prostředí</a>
+  <a href="geometricketransformace.html" class="w3-bar-item w3-button">Geometrické transformace</a>
+  <a href="jasovetransformace.html" class="w3-bar-item w3-button">Jasové transformace</a>
+  <a href="filtracesumu.html" class="w3-bar-item w3-button">Filtrace šumu</a>
+  <a href="hranovedetektory.html" class="w3-bar-item w3-button">Hranové detektory</a>
+  <a href="segmentace.html" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey">Segmentace obrazu</a>
+  <a href="morfologie.html" class="w3-bar-item w3-button">Binární morfologie</a>
+  <a href="hough.html" class="w3-bar-item w3-button">Houghova transformace</a>
+  <a href="detekce.html" class="w3-bar-item w3-button">Detekce a identifikace objektů</a>
+</nav>
+
+
+
+<!-- Overlay effect when opening the side navigation on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="Close Sidemenu" id="myOverlay"></div>
+
+<!-- Page content -->
+<div class="w3-main" style="margin-left:320px;">
+<i class="fa fa-bars w3-button w3-white w3-hide-large w3-xlarge w3-margin-left w3-margin-top" onclick="w3_open()"></i>
+
+
+<div id="Borge" class="w3-container methods">
+  <br>
+  <h4><b>Segmentace obrazu</b></h4>
+  <hr>
+  <h6><b>Jednoduché prahování</b></h6>
+    <ul>
+      <li><b>Modul, metoda: </b>modul_simple_thres, method_simple_thresh(previous, n1, n2, method)</li>
+      <li><b>Parametry metody: </b>previous - vstupní obrázek, n1 - prahová hodnota, n2 - hodnota, se kterou se má počítat, když je hodnota pixelu větší než prahová hodnota, method - typ prahování</li>
+      <li><b>Popis: </b>Segmentace obrázku dle zvoleného prahu a typu prahování.</li>
+    </ul>
+
+  <h6><b>Adaptivní prahování</b></h6>
+    <ul>
+      <li><b>Modul, metoda: </b>modul_adaptive_thresh, method_adaptive_thresh(previous, maxV, blockS, C_const, method)</li>
+      <li><b>Parametry metody: </b>previous - vstupní obrázek, maxV - maximální prahová hodnota, blockS - velikost bloku, C_const - konstanta, která se odečte od vypočítaného průměru nebo od váženého průměru, method - typ prahování</li>
+      <li><b>Popis: </b>Segmentace obrázku pomocí adaptivních prahových hodnot dle zvolené hodnoty prahu, velikosti bloku, konstanty a typu prahování.</li>
+    </ul>
+  <h6><b>Binarizace Otsu</b></h6>
+    <ul>
+      <li><b>Modul, metoda: </b>modul_otsu_thresh, method_otsu_thresh(previous, thresh, maxValue)</li>
+      <li><b>Parametry metody: </b>previous - vstupní obrázek, thresh - prahová hodnota, maxValue - hodnota, která se má použít při překročení prahu </li>
+      <li><b>Popis: Segmentace obrázku pomocí histogramu.</b>.</li>
+    </ul>
+
+</div>     
+</div>
+
+</body>
+</html> 

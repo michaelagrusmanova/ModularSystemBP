@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <title>Modulární systém pro předzpracování a analýzu digitálních obrazových dat</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href='https://fonts.googleapis.com/css?family=RobotoDraft' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+<!-- Side Navigation -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-white w3-animate-left w3-card" style="z-index:3;width:320px;" id="mySidebar">
+  <br>
+  <a href="index.html" class="w3-bar-item w3-button">O programu</a>
+  <a href="barevneprostredi.html" class="w3-bar-item w3-button">Barevné prostředí</a>
+  <a href="geometricketransformace.html" class="w3-bar-item w3-button">Geometrické transformace</a>
+  <a href="jasovetransformace.html" class="w3-bar-item w3-button">Jasové transformace</a>
+  <a href="filtracesumu.html" class="w3-bar-item w3-button">Filtrace šumu</a>
+  <a href="hranovedetektory.html" class="w3-bar-item w3-button">Hranové detektory</a>
+  <a href="segmentace.html" class="w3-bar-item w3-button">Segmentace obrazu</a>
+  <a href="morfologie.html" class="w3-bar-item w3-button">Binární morfologie</a>
+  <a href="hough.html" class="w3-bar-item w3-button">Houghova transformace</a>
+  <a href="detekce.html" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey">Detekce a identifikace objektů</a>
+</nav>
+
+
+
+<!-- Overlay effect when opening the side navigation on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="Close Sidemenu" id="myOverlay"></div>
+
+<!-- Page content -->
+<div class="w3-main" style="margin-left:320px;">
+<i class="fa fa-bars w3-button w3-white w3-hide-large w3-xlarge w3-margin-left w3-margin-top" onclick="w3_open()"></i>
+
+<div id="Borge" class="w3-container methods">
+  <br>
+  <h4><b>Detekce a identifikace objektů</b></h4>
+  <hr>
+  <h6><b>Barvení oblastí</b></h6>
+    <ul>
+      <li><b>Modul, metoda: </b>modul_coloring, method_coloring(image)</li>
+      <li><b>Parametry metody: </b>image - vstupní obrázek</li>
+      <li><b>Popis: </b>Metoda pro identifikaci oblastí. Každá oblast v obraze je označená unikátním číslem. </li>
+    </ul>
+  <h6><b>Vyhledávání vzorů</b></h6>
+  <ul>
+      <li><b>Modul, metoda: </b>modul_searching, method_searching(previous, template, method)</li>
+      <li><b>Parametry metody: </b>previous - vstupní obrázek, template - šablona, method - metoda porovnávání (defaultně: cv2.TM_CCOEFF_NORMED)</li>
+      <li><b>Popis: </b>Vyhledání šabolony (šablon) v obrázku.</li>
+    </ul>
+  <h6><b>Detekce obličeje pomocí AdaBoost a Haar příznaků</b></h6>
+  <ul>
+      <li><b>Modul, metoda: </b>modul_adaboost_haar, method_face_recognition(previous)</li>
+      <li><b>Parametry metody: </b>previous - vstupní obrázek</li>
+      <li><b>Popis: </b>Detekce obličeje pomocí Haar klasifikátorů a klasifikačním algoritmem AdaBoost.</li>
+    </ul>
+  <h6><b>Detekce obličeje pomocí Dlib</b></h6>
+  <ul>
+      <li><b>Modul, metoda: </b>modul_dlib, method_dlib_face_recognition(previous)</li>
+      <li><b>Parametry metody: </b>previous - vstupní obrázek</li>
+      <li><b>Popis: </b>Detekce orientačních bodů tváře (oči, obočí, nos, ústa).</li>
+    </ul>
+  <h6><b>Identifikace obličeje pomocí Face_recognition</b></h6>
+  <ul>
+      <li><b>Modul, metoda: </b>modul_face_recognition, method_face_recognition(previous, dataset, method)</li>
+      <li><b>Parametry metody: </b>previous - vstupní obrázek, dataset - vytvořený dataset pro rozpoznání vybraných obličejů, method - typ metody pro rozpoznávání (HOG, CNN)</li>
+      <li><b>Popis: </b>Rozpoznání daných obličejů (v datasetu).</li>
+    </ul>
+</div>     
+</div>
+
+</body>
+</html> 

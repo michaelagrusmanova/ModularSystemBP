@@ -1,0 +1,46 @@
+html, body {
+    font-family: "RobotoDraft", "Roboto", sans-serif;
+    margin-right:10%;
+    margin-left:1%;
+}	
+
+h1, h2, h3, h4, h5{
+	font-family: "RobotoDraft", "Roboto", sans-serif;
+    margin: 50px 10px;
+}
+
+ul, li p, p, a{
+	font-family: "RobotoDraft", "Roboto", sans-serif;
+	font-size: 100%;	
+}
+
+#Borge.w3-container.methods{
+    margin-left:3%;
+}
+
+.program{
+	margin: 50px, 0px;
+}
+
+
+#mySidebar{
+	z-index:3;
+	width:320px;
+
+}
+
+.w3-bar-block .w3-bar-item {
+    padding: 16px;
+}
+
+#buttons{
+	padding-top:50px;
+}
+
+.w3-main{
+	margin-left:320px;
+}
+
+a:active {
+  background-color: yellow;
+}
